@@ -1,0 +1,35 @@
+
+.error {
+  text-align: center;
+  padding: 100px 20px;
+  min-height: 70vh;
+}
+
+h1 {
+  font-size: 120px;
+  color: #1676a8;
+  margin: 0;
+}
+
+h2 {
+  font-size: 30px;
+  color: #102a43;
+}
+
+p {
+  color: #64748b;
+  margin: 20px 0 35px;
+}
+
+.boton {
+  display: inline-block;
+  padding: 15px 30px;
+  background: #102a43;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+.boton:hover {
+  background: #1676a8;
+}

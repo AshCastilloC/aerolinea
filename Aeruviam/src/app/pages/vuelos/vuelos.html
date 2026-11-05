@@ -1,0 +1,36 @@
+
+<section class="contenedor">
+  <h1>✈ Vuelos disponibles</h1>
+  <p>Encuentra tu próximo destino con Aeruviam.</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Código</th>
+        <th>Origen</th>
+        <th>Destino</th>
+        <th>Hora</th>
+        <th>Precio</th>
+        <th>Estado</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      @for (vuelo of vuelos; track vuelo.id) {
+        <tr>
+          <td>AV{{ vuelo.id }}</td>
+          <td>{{ vuelo.origen }}</td>
+          <td>{{ vuelo.destino }}</td>
+          <td>{{ vuelo.hora }}</td>
+          <td>S/ {{ vuelo.precio }}</td>
+          <td>
+            <span [class.agotado]="vuelo.estado === 'Agotado'"
+                  [class.disponible]="vuelo.estado === 'Disponible'">
+              {{ vuelo.estado }}
+            </span>
+          </td>
+        </tr>
+      }
+    </tbody>
+  </table>
+</section>
